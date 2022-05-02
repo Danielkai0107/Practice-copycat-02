@@ -26,7 +26,7 @@ $theme-green : rgb(18, 97, 37);
 		}
 	}
 	&__title{
-		@include absolute-center (50%,65%,-50%,-50%);
+		@include absolute-center (50%,60%,-50%,-50%);
 		@extend %flex-col-center;
 		color: #fff;
 		text-align: center;

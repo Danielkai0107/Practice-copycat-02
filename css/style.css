@@ -78,7 +78,7 @@
 .header__title {
   position: absolute;
   left: 50%;
-  top: 65%;
+  top: 60%;
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
