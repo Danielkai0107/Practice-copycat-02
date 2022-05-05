@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header row-100 row-50-sm">
-      <section class="header__img">
-        <img src="images/img_kv_03.jpg" alt="" />
-      </section>
+    <!-- start header -->
+    <header class="header row-100 row-50-md">
+      <section class="header__img"></section>
       <a class="header__logo" href=""></a>
       <section class="header__title">
         <div class="header__title--logo" href=""></div>
@@ -21,8 +20,11 @@
         <h1>OPEN!</h1>
       </section>
     </header>
+    <!-- end header -->
 
-    <main class="main row-100 row-50-sm">
+    <!-- start main -->
+    <main class="main row-100 row-50-md">
+      <!-- start art1 -->
       <article class="art1">
         <section class="art1__title row-40">
           <h2>
@@ -73,6 +75,9 @@
           </li>
         </ul>
       </article>
+      <!-- end art1 -->
+
+      <!-- start art2 -->
 
       <article class="art2">
         <section class="art2__text">
@@ -82,13 +87,21 @@
             ワンちゃん・ネコちゃんと新しい家族をつなぐふれあいの場です。どなたでも気軽にお越しいただけます。
           </p>
           <a href="">詳しくはこちら</a>
-          <div class="art2__text--bgc"></div>
+          <div class="art2__text--bgc bgc"></div>
         </section>
         <section class="art2__img row-100">
-          <img class="art2__img--main" src="images/img_foster_01.png" alt="" />
+          <img
+            class="art2__img--main img"
+            src="images/img_foster_01.png"
+            alt=""
+          />
           <img class="art2__img--second" src="images/hand.png" alt="" />
         </section>
       </article>
+
+      <!-- end art2 -->
+
+      <!-- start art3 -->
 
       <article class="art3">
         <section class="art3__text">
@@ -100,13 +113,20 @@
             ※飼い主様と一緒に泊まることはできません。
           </p>
           <a href="">詳しくはこちら</a>
-          <div class="art3__text--bgc"></div>
+          <div class="art3__text--bgc bgc"></div>
         </section>
         <section class="art3__img row-100">
-          <img class="art3__img--main" src="images/img_hotel_01.png" alt="" />
+          <img
+            class="art3__img--main img"
+            src="images/img_hotel_01.png"
+            alt=""
+          />
           <img class="art3__img--second" src="images/dog.png" alt="" />
         </section>
       </article>
+      <!-- end art3 -->
+
+      <!-- start art4-->
 
       <article class="art4">
         <section class="art4__text">
@@ -116,13 +136,42 @@
             約1,200㎡の広大な芝生の中で、三重の澄んだ空気を存分に楽しんでいただけます。
           </p>
           <a href="">詳しくはこちら</a>
-          <div class="art4__text--bgc"></div>
+          <div class="art4__text--bgc bgc"></div>
         </section>
         <section class="art4__img row-100">
-          <img class="art4__img--main" src="images/img_dogrun_01.png" alt="" />
+          <img
+            class="art4__img--main img"
+            src="images/img_dogrun_01.png"
+            alt=""
+          />
           <img class="art4__img--second" src="images/grass.png" alt="" />
         </section>
       </article>
+      <!-- end art4-->
+
+      <!-- start art5 -->
+      <article class="art5 row-70">
+        <!-- art5 標題 -->
+        <h1>News</h1>
+        <!-- art5 連結區塊 -->
+        <a href="">
+          <section class="album">
+            <div class="album__img">
+              <img src="images/img_news_01.png" alt="" />
+            </div>
+            <div class="album__text">
+              <h2><span>お知らせ</span>2022.4.25</h2>
+              <p>ani TERRACE公式サイトを公開しました。</p>
+            </div>
+          </section>
+        </a>
+        <!-- 按鈕 -->
+        <a class="art5__tag" href="">お知らせ一覧</a>
+      </article>
+      <!-- end art5 -->
     </main>
+
+    <!-- end main -->
+    <script src="index.js"></script>
   </body>
 </html>

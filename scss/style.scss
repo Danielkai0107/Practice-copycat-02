@@ -11,19 +11,19 @@ $theme-green : rgb(18, 97, 37);
 	height: 100vh;
 	overflow: hidden;
 	&__logo{
-		@include absolute-lt (5%,10%);
-		@include a (6em,2em);
+		@include fixed-lt (10%,3%);
+		@include a (9em,2em);
 		@extend %bg-contain;
 		background-image: url('../images/logo_header.svg');
+		z-index: 90;
 	}
 
 	&__img {
 		height: 100%;
 		width: 100%;
-		img {
-			@include img-h (100%,auto,cover);
-			animation: scale 20s infinite ease-in-out;
-		}
+		@extend %bg-cover;
+		background-image: url('../images/img_kv_03.jpg');
+		animation: scale 20s infinite ease-in-out;
 	}
 	&__title{
 		@include absolute-center (50%,60%,-50%,-50%);
@@ -48,6 +48,7 @@ $theme-green : rgb(18, 97, 37);
 }
 
 .main {
+	overflow: hidden;
 	.art1 {
 		padding:3rem 0;
 		&__title {
@@ -161,6 +162,7 @@ $theme-green : rgb(18, 97, 37);
 				width: 100%;
 				height: 80%;
 				z-index: -1;
+				transition: all 0.6s;
 			}
 		}
 	}
@@ -205,7 +207,7 @@ $theme-green : rgb(18, 97, 37);
 			&--bgc {
 				@include absolute-lb (0,0);
 				background-color: #D5E3DB;
-				width: 65%;
+				width: 70%;
 				height: 80%;
 				z-index: -1;
 			}
@@ -259,10 +261,61 @@ $theme-green : rgb(18, 97, 37);
 			}
 		}
 	}
+	.art5 {
+		margin: 3em auto;
+		padding: 3em 0;
+		h1 {
+			@include font (1.7em,1.5,600,.1em,0);
+			@include after-b('',.5em,2px,0,#000){
+				@include absolute-lt (-6%,50%);
+			};
+		}
+		.album {
+			@extend %flex-row-center;
+			margin-top: 3em;
+			&__img {
+				flex: 2;
+				overflow: hidden;
+				img {
+					@include img-w (100%,auto,cover);
+					transition: all 0.5s;
+					&:hover {transform: scale(1.1);}
+				}
+			}
+			&__text {
+				flex: 3;
+				padding: 2em;
+				color: $font-color;
+				h2{
+					@include font (.7em,1.5,600,.1em,1em 0);
+					span {
+						font-size: 1.2em;
+						padding: .5em;
+						margin-right: 1em;
+						color: $theme-green;
+						background-color: rgb(235, 233, 233);
+					}
+				}
+				p {
+					@include font (.9em,1.5,100,.1em,1em 0);
+				}
+			}
+		}
+		&__tag {
+			@include absolute-rb (10%,0);
+			@include font (.9em,1.5,400,.1em,1em 0);
+			@include after ('→',0,0,110%,0);
+			&:hover {
+				opacity: 0.7;
+				&::after {left: 120%;}
+			}
+		}
+
+	}
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.header {
 		@include fixed-lt (0,0);
 	}
@@ -272,4 +325,16 @@ $theme-green : rgb(18, 97, 37);
 			@include absolute-lt (25%,5%);
 		}
 	}
+}
+
+.rotate {
+	animation: right 2s backwards;
+}
+
+.fade {
+	animation: fade 2s backwards;
+}
+
+.up {
+	animation: up 2s backwards;
 }

@@ -5,6 +5,19 @@
   background-size: contain;
 }
 
+.header__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main .art5 .album {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .main .art1__title {
   display: flex;
   flex-flow: wrap;
@@ -49,29 +62,66 @@
     transform: scale(1);
   }
 }
+@-webkit-keyframes right {
+  to {
+    transform: rotate(90deg);
+  }
+}
+@keyframes right {
+  to {
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fade {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .header {
   height: 100vh;
   overflow: hidden;
 }
 .header__logo {
-  position: absolute;
-  left: 5%;
+  position: fixed;
+  left: 3%;
   top: 10%;
   display: block;
-  width: 6em;
+  width: 9em;
   height: 2em;
   background-image: url("../images/logo_header.svg");
+  z-index: 90;
 }
 .header__img {
   height: 100%;
   width: 100%;
-}
-.header__img img {
-  height: 100%;
-  aspect-ratio: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  vertical-align: bottom;
+  background-image: url("../images/img_kv_03.jpg");
   -webkit-animation: scale 20s infinite ease-in-out;
           animation: scale 20s infinite ease-in-out;
 }
@@ -109,6 +159,9 @@
   background-image: url("../images/icon_aniTerrace.svg");
 }
 
+.main {
+  overflow: hidden;
+}
 .main .art1 {
   padding: 3rem 0;
 }
@@ -294,6 +347,7 @@
   width: 100%;
   height: 80%;
   z-index: -1;
+  transition: all 0.6s;
 }
 .main .art3__img {
   position: absolute;
@@ -376,7 +430,7 @@
   left: 0;
   bottom: 0;
   background-color: #D5E3DB;
-  width: 65%;
+  width: 70%;
   height: 80%;
   z-index: -1;
 }
@@ -466,8 +520,101 @@
   height: 80%;
   z-index: -1;
 }
+.main .art5 {
+  margin: 3em auto;
+  padding: 3em 0;
+}
+.main .art5 h1 {
+  font-size: 1.7em;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+.main .art5 h1::after {
+  display: block;
+  content: "";
+  width: 0.5em;
+  height: 2px;
+  border-radius: 0;
+  background-color: #000;
+  transition: all 0.3s;
+  position: absolute;
+  left: -6%;
+  top: 50%;
+}
+.main .art5 .album {
+  margin-top: 3em;
+}
+.main .art5 .album__img {
+  flex: 2;
+  overflow: hidden;
+}
+.main .art5 .album__img img {
+  width: 100%;
+  aspect-ratio: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+  transition: all 0.5s;
+}
+.main .art5 .album__img img:hover {
+  transform: scale(1.1);
+}
+.main .art5 .album__text {
+  flex: 3;
+  padding: 2em;
+  color: rgb(132, 132, 132);
+}
+.main .art5 .album__text h2 {
+  font-size: 0.7em;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 1em 0;
+}
+.main .art5 .album__text h2 span {
+  font-size: 1.2em;
+  padding: 0.5em;
+  margin-right: 1em;
+  color: rgb(18, 97, 37);
+  background-color: rgb(235, 233, 233);
+}
+.main .art5 .album__text p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  margin: 1em 0;
+}
+.main .art5__tag {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin: 1em 0;
+}
+.main .art5__tag::after {
+  display: block;
+  content: "→";
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 110%;
+  top: 0;
+  transition: all 0.3s;
+}
+.main .art5__tag:hover {
+  opacity: 0.7;
+}
+.main .art5__tag:hover::after {
+  left: 120%;
+}
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header {
     position: fixed;
     left: 0;
@@ -482,4 +629,18 @@
     left: 25%;
     top: 5%;
   }
+}
+.rotate {
+  -webkit-animation: right 2s backwards;
+          animation: right 2s backwards;
+}
+
+.fade {
+  -webkit-animation: fade 2s backwards;
+          animation: fade 2s backwards;
+}
+
+.up {
+  -webkit-animation: up 2s backwards;
+          animation: up 2s backwards;
 }/*# sourceMappingURL=style.css.map */
