@@ -327,14 +327,17 @@ $theme-green : rgb(18, 97, 37);
 	}
 }
 
-.rotate {
-	animation: right 2s backwards;
+.bgc {
+	opacity: 0;
+}
+.img {
+	transform: translateY(100px);
 }
 
 .fade {
-	animation: fade 2s backwards;
+	animation: fade 1.5s forwards;
 }
 
 .up {
-	animation: up 2s backwards;
+	animation: up 1.3s forwards;
 }
