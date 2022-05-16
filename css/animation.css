@@ -1,0 +1,101 @@
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes right {
+  to {
+    transform: rotate(90deg);
+  }
+}
+@keyframes right {
+  to {
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes up {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes up {
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes navbar {
+  0% {
+    opacity: 0;
+    right: -5%;
+  }
+  100% {
+    opacity: 1;
+    right: 0%;
+  }
+}
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    right: -5%;
+  }
+  100% {
+    opacity: 1;
+    right: 0%;
+  }
+}
+.bgc {
+  opacity: 0;
+}
+
+.img {
+  transform: translateY(100px);
+}
+
+.fade {
+  -webkit-animation: fade 1.5s forwards;
+          animation: fade 1.5s forwards;
+}
+
+.up {
+  -webkit-animation: up 1.3s forwards;
+          animation: up 1.3s forwards;
+}
+
+.none {
+  display: none;
+}/*# sourceMappingURL=animation.css.map */
