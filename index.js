@@ -47,18 +47,20 @@ imgChange();
 const navbarBtn = document.querySelector('.navbar__btn');
 const navbar = document.querySelector('.navbar__container');
 const main = document.querySelector('.main');
+const mainChild = document.querySelector('.main').children;
 const navbarList = document.querySelector('.navbar__list').children;
-const position = [0, 1929, 2888, 3785, 4105];
 
 navbarBtn.addEventListener('click', () => {
+  window.scrollTo(0, 0);
   navbar.classList.toggle('none');
   main.classList.toggle('none');
 });
 
 for (let i = 0; i < navbarList.length; i++) {
+  const x = mainChild[i].offsetTop;
   navbarList[i].addEventListener('click', () => {
     main.classList.toggle('none');
     navbar.classList.toggle('none');
-    window.scrollTo(0, position[i]);
+    window.scrollTo(0, x);
   });
 }
