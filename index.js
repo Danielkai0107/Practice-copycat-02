@@ -37,9 +37,9 @@ function imgChange() {
       if (i == 2) {
         img.style.backgroundImage = 'url(../images/5.jpg)';
       }
-    }, 8000 * i);
+    }, 10000 * i);
   }
-  setTimeout(imgChange, 24000);
+  setTimeout(imgChange, 30000);
 }
 
 imgChange();
