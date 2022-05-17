@@ -44,6 +44,8 @@ function imgChange() {
 
 imgChange();
 
+//navbar 選單
+
 const navbarBtn = document.querySelector('.navbar__btn');
 const navbar = document.querySelector('.navbar__container');
 const main = document.querySelector('.main');
@@ -55,6 +57,8 @@ navbarBtn.addEventListener('click', () => {
   navbar.classList.toggle('none');
   main.classList.toggle('none');
 });
+
+//navbar 連結跳轉
 
 for (let i = 0; i < navbarList.length; i++) {
   const x = mainChild[i].offsetTop;
