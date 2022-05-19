@@ -22,24 +22,19 @@ for (let i = 0; i < art.length; i++) {
 
 // 換圖輪播
 
-const img = document.querySelector('.header__img');
-const imgLogo = document.querySelector('.header__title--logo');
+const img = document.querySelectorAll('.header__img');
+console.log(img);
 
 function imgChange() {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < img.length; i++) {
     setTimeout(() => {
-      if (i == 0) {
-        img.style.backgroundImage = 'url(../images/3.jpg)';
-      }
-      if (i == 1) {
-        img.style.backgroundImage = 'url(../images/4.jpg)';
-      }
-      if (i == 2) {
-        img.style.backgroundImage = 'url(../images/5.jpg)';
-      }
-    }, 10000 * i);
+      img[i].classList.remove('op');
+    }, 8000 * i);
+    setTimeout(() => {
+      img[i].classList.add('op');
+    }, 8000 * (i + 1));
+    setTimeout(imgChange, 24000);
   }
-  setTimeout(imgChange, 30000);
 }
 
 imgChange();

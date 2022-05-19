@@ -98,4 +98,8 @@
 
 .none {
   display: none;
+}
+
+.op {
+  opacity: 0;
 }/*# sourceMappingURL=animation.css.map */

@@ -5,12 +5,6 @@
   background-size: contain;
 }
 
-.header__img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .main .art5 .album, .navbar__container .navbar__login {
   display: flex;
   flex-flow: wrap;
@@ -149,6 +143,10 @@
   display: none;
 }
 
+.op {
+  opacity: 0;
+}
+
 .header {
   height: 100vh;
   overflow: hidden;
@@ -163,13 +161,21 @@
   background-image: url("../images/logo_header.svg");
   z-index: 90;
 }
-.header__img {
+.header__imgBox {
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
-  background-image: url("../images/3.jpg");
   transition: all 2s;
-  -webkit-animation: scale 20s infinite ease-in-out;
-          animation: scale 20s infinite ease-in-out;
+  -webkit-animation: scale 24s infinite linear;
+          animation: scale 24s infinite linear;
+}
+.header__imgBox img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 2s;
 }
 .header__title {
   position: absolute;

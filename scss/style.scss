@@ -16,13 +16,17 @@ $theme-green: rgb(18, 97, 37);
     background-image: url('../images/logo_header.svg');
     z-index: 90;
   }
-  &__img {
+  &__imgBox {
+    @include absolute-lt(0, 0);
     height: 100%;
     width: 100%;
-    @extend %bg-cover;
-    background-image: url('../images/3.jpg');
     transition: all 2s;
-    animation: scale 20s infinite ease-in-out;
+    animation: scale 24s infinite linear;
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: all 2s;
+    }
   }
   &__title {
     @include absolute-center(50%, 60%, -50%, -50%);
