@@ -23,7 +23,6 @@ for (let i = 0; i < art.length; i++) {
 // 換圖輪播
 
 const img = document.querySelectorAll('.header__img');
-console.log(img);
 
 function imgChange() {
   for (let i = 0; i < img.length; i++) {
@@ -45,7 +44,6 @@ const navbarBtn = document.querySelector('.navbar__btn');
 const navbar = document.querySelector('.navbar__container');
 const main = document.querySelector('.main');
 const mainChild = document.querySelector('.main').children;
-const navbarList = document.querySelector('.navbar__list').children;
 
 navbarBtn.addEventListener('click', () => {
   window.scrollTo(0, 0);
@@ -55,11 +53,14 @@ navbarBtn.addEventListener('click', () => {
 
 //navbar 連結跳轉
 
+const navbarList = document.querySelectorAll('.list__item');
+
 for (let i = 0; i < navbarList.length; i++) {
-  const x = mainChild[i].offsetTop;
+  const x = mainChild[i].parentElement.offsetTop + mainChild[i].offsetTop;
   navbarList[i].addEventListener('click', () => {
     main.classList.toggle('none');
     navbar.classList.toggle('none');
     window.scrollTo(0, x);
+    console.log(x, window.scrollY);
   });
 }
