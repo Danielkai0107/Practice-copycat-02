@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body onload="opener.location.reload()">
     <!-- 開窗時刷新 -->
-    <body onload="opener.location.reload()">
 
-      <script language="javascript">
-      window.opener.document.location.reload()
-      </script>
+    <script language="javascript">
+      window.opener.document.location.reload();
+    </script>
 
     <!-- start header -->
     <header class="header row-100 row-50-md">
